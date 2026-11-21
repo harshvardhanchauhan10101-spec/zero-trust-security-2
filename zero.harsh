@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char username[20];
+    char password[20];
+
+    char correct_user[] = "admin";
+    char correct_pass[] = "1234";
+
+    printf("================================\n");
+    printf("   ZERO TRUST SECURITY SYSTEM\n");
+    printf("================================\n");
+
+    printf("Enter Username: ");
+    scanf("%19s", username);
+
+    printf("Enter Password: ");
+    scanf("%19s", password);
+
+    // Verify user identity
+    if (strcmp(username, correct_user) == 0 &&
+        strcmp(password, correct_pass) == 0)
+    {
+        printf("\nIdentity Verified!\n");
+        printf("Access Granted.\n");
+        printf("Welcome to Secure System.\n");
+    }
+    else
+    {
+        printf("\nIdentity Verification Failed!\n");
+        printf("Access Denied.\n");
+    }
+
+    return 0;
+}
